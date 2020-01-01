@@ -26,6 +26,18 @@ $client->deleteFolder($remoteFolder);
 $client->renameFolder($remoteFolder, $remoteFolderNew);
 ````
 
+## Configuration
+
+Edit or create `$HOME/.env`
+
+````
+WEBDAV_LOCATION=<WebdavEndPoint>
+WEBDAV_USERNAME=<YourUserName>
+WEBDAV_PASSWORD=<YourPassword>
+````
+
+`WEBDAV_LOCATION` looks like https://WebdavHost/remote.php/webdav
+
 ## Command Line Interface
 
 ````
