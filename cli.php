@@ -11,9 +11,9 @@ function cmd_help(){
 Usage: php cli.php <command> [argument..]
 Commands:
   ls   List a remote directory\'s files and folders
-	put  Copy a local file to the remote host
-	get  Copy a remote file to the local PC
-	rm   Delete file on remote host
+  put  Copy a local file to the remote host
+  get  Copy a remote file to the local PC
+  del   Delete file on remote host
 ';
 }
 
@@ -27,7 +27,7 @@ function main(){
 		return cmd_ls();
 	} elseif ($_SERVER['argv'][1] == 'put'){
 		return cmd_put($_SERVER['argv'][2]);
-	} elseif ($_SERVER['argv'][1] == 'rm'){
+	} elseif ($_SERVER['argv'][1] == 'del'){
 		return cmd_rm($_SERVER['argv'][2]);
 	}
 
@@ -64,7 +64,7 @@ function cmd_get(){
 
 }
 
-function cmd_rm($remoteFile){
+function cmd_del($remoteFile){
 
 	env_init();
 	lib_init();
